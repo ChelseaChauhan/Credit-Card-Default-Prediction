@@ -1,4 +1,4 @@
-# iNeuron_CCDP
+# CREDIT CARD DEFAULT PREDICTION
 
 # ABSTRACT
 In today’s world, almost everything is now made cashless. People are living in a cashless society where payments are made through e-wallets, credit cards, debit cards etc. As stated by the world’s payment report, in year 2016 total non-cash transactions were 10.1% more than the total non-cash transactions in year 2015. Of course, now in 2023, it must be grown more than above stated. With the rise in non-cash transactions, the fraudulent transactions are also on the rise. One of the most successful financial services offered by banks in recent years has been the credit card. Yet, banks have been dealing with an increasing credit card default rate due to the rising number of credit card users. Data analytics can therefore offer ways to address the existing issue and control credit risk. So, to evaluate the variable in predicting credit default, machine learning classifiers such as logistic regression, decision tree classifier, ridge classifier, random forest, etc. are used; random forest proven to have the greater accuracy.
