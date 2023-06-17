@@ -1,23 +1,24 @@
 # CREDIT CARD DEFAULT PREDICTION
 
-# ABSTRACT
+## ABSTRACT
 In today’s world, almost everything is now made cashless. People are living in a cashless society where payments are made through e-wallets, credit cards, debit cards etc. As stated by the world’s payment report, in year 2016 total non-cash transactions were 10.1% more than the total non-cash transactions in year 2015. Of course, now in 2023, it must be grown more than above stated. With the rise in non-cash transactions, the fraudulent transactions are also on the rise. One of the most successful financial services offered by banks in recent years has been the credit card. Yet, banks have been dealing with an increasing credit card default rate due to the rising number of credit card users. Data analytics can therefore offer ways to address the existing issue and control credit risk. So, to evaluate the variable in predicting credit default, machine learning classifiers such as logistic regression, decision tree classifier, ridge classifier, random forest, etc. are used; random forest proven to have the greater accuracy.
 
-# GENERAL DESCRIPTION
-## Product Perspective
+## GENERAL DESCRIPTION
+
+### Product Perspective
 The credit card default prediction system is a machine learning based solution to predict the probability of a client defaulting the credit payment in the coming time based on the credit card owner's characteristics and payment history.
-## Problem Statement
+### Problem Statement
 To create an ML solution to predict the probability of credit default based on the credit card owner's characteristics and payment history.
-## Proposed Solution
+### Proposed Solution
 The solution proposed here is that a machine learning based approach can be used to detect the probability of credit default by a client based on the history of their previous payments. ML has classifiers which are based on supervised learning that are capable of classifying the future payments into default or not. Some of the classifiers that are used in the proposed approach are logistic regression classifier, decision tree classifier, random forest classifier, support vector machine, k-neighbor classifier, ridge regression, linear discriminant analysis, etc. These models are first trained and then tested on the test data and finally their performance is measured based on their accuracy.
-## Data Requirements
+### Data Requirements
 The data requirement depends on the problem statement.
 - We need the payment history of the clients for the past 6 months.
 - We need the data which includes sex, marriage status, education, age, etc of the clients.
 -	We need the bill amount and payment amount history for past 6 months for the respective clients.
 -	The data must not include any null or undefined values.
 -	The data can be in csv or excel format.
-## Tools Used
+### Tools Used
 Python programming language and frameworks such as NumPy, Pandas, Scikit-learn, etc. are used to build the whole model.
 -	Google Colab is used as an IDE.
 -	For visualization of the plots, Matplotlib, Seaborn and Plotly are used.
@@ -26,53 +27,54 @@ Python programming language and frameworks such as NumPy, Pandas, Scikit-learn, 
 
 ![image](https://user-images.githubusercontent.com/122624945/232180931-56e9363a-608a-47b1-8d94-93cce660ab30.png)
 
-# DESIGN DETAILS
-## Process Flow
+## DESIGN DETAILS
+
+### Process Flow
 To find the probability of a client defaulting the payment next month, we will use machine learning models for the purpose of predicting. We will train the models using client’s historical data. The flow diagram is as shown below:
-### Proposed Methodology
+#### Proposed Methodology
 
 ![image](https://user-images.githubusercontent.com/122624945/232181452-40fca43c-f9a6-4962-8f2d-236506aed191.png)
 
-### Model Training & Evaluation Flow
+#### Model Training & Evaluation Flow
 
 ![image](https://user-images.githubusercontent.com/122624945/232181422-bbdc7a68-c681-4d4f-bd08-cb0f6f1d3659.png)
 
-# ARCHITECTURE
+## ARCHITECTURE
 
 ![image](https://user-images.githubusercontent.com/122624945/232181397-37905296-8d8c-47af-9644-4c02115a0ec6.png)
 
-## Architecture Description
+### Architecture Description
 
-### Data Description
+#### Data Description
 This dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005. There are total 25 variables.
-### Library Import
+#### Library Import
 In order to perform specific operations such as arithmetic, visualization, etc. some python libraries such as NumPy, matplotlib, seaborn, etc are needed to be imported before making use of them.
-### Data Transformation
+#### Data Transformation
 In the Transformation Process, we will convert our original dataset which can in any other format to CSV format. 
-### Data Insertion into Database  
+#### Data Insertion into Database  
 1. Database Creation and connection - Create a database with name passed. If the database is already created, open the connection to the database. 
 2. Table creation in the database. 
 3. Insertion of files in the table 
-### Export Data from Database  
+#### Export Data from Database  
 Data Export from Database - The data in a stored database is exported as a CSV file to be used for Data Pre-processing and Model Training. 
-### Data Understanding
+#### Data Understanding
 Gaining broad insights about the data that may be useful for subsequent steps in the data analysis process is the primary purpose of data comprehension, although this should not be the only motivation for this stage of the process.
-### Data Pre-Processing
+#### Data Pre-Processing
 Any type of processing done on raw data to get it ready for another data processing operation is referred to as data pre-processing, which is a part of data preparation. Data pre-processing changes the data into a format that can be processed in data mining, machine learning, and other data science tasks more quickly and efficiently.
-### Data Visualisation
+#### Data Visualisation
 The purpose of visualising the data is to understand it better using graphs. It can be used to understand the properties of data and can also be used to visualise the results.
-### Data Splitting
+#### Data Splitting
 Data is divided into two parts- training data and testing data. Training data is used to train the models whereas the accuracy of models are tested by using the testing data.
-### Model Building
+#### Model Building
 We load the various models that we are going to use for the prediction. Machine learning supervised models are used in this system. They are imported using sklearn library.
-### Model Training
+#### Model Training
 Models are trained using the training data by passing the new values to them.
-### Model Evaluation
+#### Model Evaluation
 The various models generate various accuracy scores and log loss scores which can be used to evaluate the models. We can tell which model performed better than other models.
-### Prediction
+#### Prediction
 After all this, the system is ready to be deployed in the real world to predict the credit default before it occurs, using the real time data.
 
-# IMPLEMENTATION
+## IMPLEMENTATION
 The implementation is divided into 5 Sections which are as follows:
 1. Library import
 2. Feature engineering
@@ -80,7 +82,7 @@ The implementation is divided into 5 Sections which are as follows:
 4. Model building & training
 5. Model Evaluation
 
-# Library Import
+### Library Import
 Following are the important libraries and their modules that have been imported:
 - import pandas as pd
 - import numpy as np
@@ -97,7 +99,7 @@ Following are the important libraries and their modules that have been imported:
 - from sklearn.tree import DecisionTreeClassifier
 - from sklearn.metrics import accuracy_score,classification_report,confusion_matrix,mean_squared_error,log_loss
 
-# Feature Engineering
+### Feature Engineering
 In this section, we have performed the following:
 1. The last column "default.payment.next.month" has been changed to "Default" for convenience.
 2. "PAY_0" column has been changed to "PAY_1".
@@ -106,7 +108,7 @@ In this section, we have performed the following:
 5. The categories 4:others, 5:unknown, and 6:unknown inside "EDUCATION" are grouped into a single class '4'.
 6. Similarly, the column 'MARRIAGE' should have three categories: 1 = married, 2 = single, 3 = others but it contains a category '0' which are grouped together into category '3'.
 
-# Understanding Dataset Properties
+### Understanding Dataset Properties
 - We find the total number of columns and rows, check for null and duplicate values and resolve the issues. We find the summary of statistics for each column.
 - We find the number of credit cards in each caterory i.e., default or not and plot a bar graph for the same.
     ![image](https://user-images.githubusercontent.com/122624945/232182385-527fba1e-ef38-4d7c-8537-865cd2da7a0f.png)
@@ -119,11 +121,11 @@ In this section, we have performed the following:
 - After this, we plot the correlation matrix/heatmap of all the variables. 
     ![image](https://user-images.githubusercontent.com/122624945/232182760-50cb6fe7-63fd-403a-8159-f5b7868f2ebf.png)
 
-# Model Building and Training
+### Model Building and Training
 - We split the dataset into test and train.
 - We load the machine learning classifiers and then fit the training dataset into the model.
 
-# Model Evaluation
+### Model Evaluation
 To evaluate the model efficiency we are using the accuracy score, confusion matrix, classification report and log loss.
 
 ![image](https://user-images.githubusercontent.com/122624945/232182929-77279033-69b9-4824-99e7-da547bd2250e.png)
